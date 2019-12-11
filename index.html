@@ -1,26 +1,32 @@
 ---
-# Front matter
+title: Open Source Portfolio
+description: All open source projects on GitHub
 ---
 
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" media="all" href="/css/style.scss">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700" type="text/css">
+    <meta name="viewport" content="width=device-width, inital-scale=1">
+  </head>
   <body>
-    <ul class="list list--repos">
-      <li class="item item--repo">
-        <a href="#">repo-name</a>
-      </li>
-    </ul>
+    <!--<header class="header">
+      <h1>{{ page.title }}</h1>
+      <h2>{{ page.description }}</h2>
+    </header>-->
 
     <ul class="portfolio">
       {% for repo in site.github.public_repositories limit:28 %}
 
         {% if repo.fork != true %}
           <li class="repo">
-            <a href="{{ repo.homepage }}">{{ repo.name }}</a>
+            <a href="{{ repo.html_url }}">{{ repo.name }}</a> ({{ repo.language | downcase }})
           </li>
         {% endif %}
 
-      {% endfor %}  
+      {% endfor %}
     </ul>
   </body>
 </html>
