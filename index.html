@@ -20,8 +20,8 @@ description: All open source projects on GitHub
 
     <ul class="portfolio">
       {% for repo in site.github.public_repositories limit:28 %}
+        <strong><h2>My projects</h2></strong>
         {% if repo.fork != true %}
-          <h2>My projects</h2>
           <li class="repo repo--{{ repo.language | downcase }}">
             <svg class="icon">
               <use xmlns:xlink="http://www.w3.com/1999/xlink" xlink:href="#{{ repo.language | downcase }}"></use>
@@ -36,8 +36,8 @@ description: All open source projects on GitHub
             </aside>
           </li>
         {% endif %}
+        <strong><h2>Projects I forked</h2></strong>
         {% if repo.fork == true %}
-        <h2>Projects I forked</h2>
         <li class="repo repo--{{ repo.language | downcase }}">
           <svg class="icon">
             <use xmlns:xlink="http://www.w3.com/1999/xlink" xlink:href="#{{ repo.language | downcase }}"></use>
