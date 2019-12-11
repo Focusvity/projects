@@ -93,7 +93,7 @@ h3 {
   width: 32.33%;
   margin: .5%;
   padding: 30px 30px;
-  background: fade-out(#4078c0, 0.9)
+  background: fade-out(#4078c0, 0.9);
   transition: .2s;
   @media (max-width: 960px) {
     width: 49%;
@@ -172,15 +172,6 @@ h3 {
       color: #000080;
     }
   }
-  &--c# {
-    background: fade-out(#178600, 0.9);
-    .icon {
-      fill: #178600;
-      background: transparent;
-    }
-    a {
-      color: #178600;
-    }
   }
 }
 
