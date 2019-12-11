@@ -12,20 +12,28 @@ description: All open source projects on GitHub
     <meta name="viewport" content="width=device-width, inital-scale=1">
   </head>
   <body>
-    <!--<header class="header">
+    <header class="header">
       <h1>{{ page.title }}</h1>
       <h2>{{ page.description }}</h2>
-    </header>-->
+    </header>
 
     <ul class="portfolio">
       {% for repo in site.github.public_repositories limit:28 %}
-
         {% if repo.fork != true %}
-          <li class="repo">
-            <a href="{{ repo.html_url }}">{{ repo.name }}</a> ({{ repo.language | downcase }})
+          <li class="repo repo--{{ repo.language | downcase }}">
+            <svg class="icon">
+              <use xmlns:xlink="http://www.w3.com/1999/xlink" xlink:href="#{{ repo.language | downcase }}"></use>
+            </svg>
+            <h3><a href="{{ repo.html_url }}">{{ repo.name }}</a></h3>
+            <p>{{ repo.description }}</p>
+            <a class="button" href="{{ repo.html_url }}/archive/{{ repo.default_branch }}.zip"><svg class="icon icon--sub"><use xmlns:xlink="http://www.w3.com/1999/xlink" xlink:href="#down"></use></svg> Download</a>
+            <a class="button" href="{{ repo.html_url }}/fork"><svg class="icon icon--sub"><use xmlns:xlink="http://www.w3.com/1999/xlink" xlink:href="#octocat"></use></svg> Fork it</a>
+            <aside class="details">
+              <span><svg class="icon icon--sub"><use xmlns:xlink="http://www.w3.com/1999/xlink" xlink:href="#star"></use></svg> {{ repo.stargazers_count }}</span>
+              <span><svg class="icon icon--sub"><use xmlns:xlink="http://www.w3.com/1999/xlink" xlink:href="#fork"></use></svg> {{ repo.forks_count }}</span>
+            </aside>
           </li>
         {% endif %}
-
       {% endfor %}
     </ul>
   </body>
