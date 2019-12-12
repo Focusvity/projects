@@ -55,7 +55,7 @@ h3 {
   margin: 6px 12px 0 0;
   transition: .2s;
   &:hover {
-    background: fade-out(#333, 0.5);
+    background: fade-out(#fff, 0.5);
   }
 }
 
@@ -98,7 +98,7 @@ h3 {
   width: 32.33%;
   margin: .5%;
   padding: 30px 30px;
-  background: #4078c0;
+  background: fade-out(#4078c0, 0.9);
   transition: .2s;
   @media (max-width: 960px) {
     width: 49%;
@@ -111,70 +111,70 @@ h3 {
     border-right: 0;
   }
   a {
-    color: fade-out(#4078c0, 0.9);
+    color: #4078c0;
     text-decoration: none;
   }
   > .icon {
-    background: fade-out(#4078c0, 0.9);
+    background: #4078c0;
   }
   &--html {
-    background: #e34c26;
+    background: fade-out(#e34c26, 0.9);
     .icon {
-      fill: fade-out(#e34c26, 0.9);
+      fill: #e34c26;
       background: transparent;
     }
     a {
-      color: fade-out(#e34c26, 0.9);
+      color: #e34c26;
     }
   }
   &--css {
-    background: #563d7c;
+    background: fade-out(#563d7c, 0.9);
     .icon {
-      fill: fade-out(#563d7c, 0.9);
+      fill: #563d7c;
       background: transparent;
     }
     a {
-      color: fade-out(#563d7c, 0.9);
+      color: #563d7c;
     }
   }
   &--java {
-    background: #db8e21;
+    background: fade-out(#db8e21, 0.9);
     .icon {
-      fill: fade-out(#db8e21, 0.9);
+      fill: #db8e21;
       background: transparent;
     }
     a {
-      color: fade-out(#db8e21, 0.9);
+      color: #db8e21;
     }
   }
   &--ruby {
-    background: #701516;
+    background: fade-out(#701516, 0.9);
     .icon {
-      fill: fade-out(#701516, 0.9);
+      fill: #701516;
       background: transparent;
     }
     a {
-      color: fade-out(#701516, 0.9);
+      color: #701516;
     }
   }
   &--python {
-    background: #3572A5;
+    background: fade-out(#3572A5, 0.9);
     .icon {
-      fill: fade-out(#3572A5, 0.9);
+      fill: #3572A5;
       background: transparent;
     }
     a {
-      color: fade-out(#3572A5, 0.9);
+      color: #3572A5;
     }
   }
   &--lua {
-    background: #000080;
+    background: fade-out(#000080, 0.9);
     .icon {
-      fill: fade-out(#000080, 0.9);
+      fill: #000080;
       background: transparent;
     }
     a {
-      color: fade-out(#000080, 0.9);
+      color: #000080;
     }
   }
 }
