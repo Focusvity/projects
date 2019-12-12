@@ -19,7 +19,7 @@ description: All open source projects on GitHub
     </header>
 
     <ul class="portfolio">
-      <div>
+      <section>
         <strong><h2>My Projects</h2></strong>
         {% for repo in site.github.public_repositories limit:28 %}
           {% if repo.fork != true %}
@@ -38,8 +38,8 @@ description: All open source projects on GitHub
             </li>
           {% endif %}
         {% endfor %}
-      </div>
-      <div>
+      </section>
+      <section>
         <strong><h2>Projects I Forked</h2></strong>
         {% for repo in site.github.public_repositories limit:28 %}
           {% if repo.fork == true %}
@@ -58,7 +58,7 @@ description: All open source projects on GitHub
             </li>
           {% endif %}
         {% endfor %}
-      </div>
+      </section>
     </ul>
   </body>
 </html>
